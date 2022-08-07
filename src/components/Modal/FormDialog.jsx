@@ -42,7 +42,7 @@ export default function FormDialog({open, setOpen}) {
     return (
         <div>
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title">Welcome to the Ernsting's family online shop!</DialogTitle>
+                <DialogTitle id="form-dialog-title">Welcome to the Online shop!</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
               Before starting, please enter your prolific ID and Group number here and click on "Go!".

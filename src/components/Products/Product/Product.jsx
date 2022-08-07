@@ -1,5 +1,15 @@
 import React from 'react';
-import {Card, CardMedia, CardContent, CardActions, Typography, IconButton, Button, Container} from '@material-ui/core';
+import {
+    Card,
+    CardMedia,
+    CardContent,
+    CardActions,
+    Typography,
+    IconButton,
+    Button,
+    Container,
+    AccordionSummary, Accordion, AccordionDetails
+} from '@material-ui/core';
 import {AddShoppingCart} from '@material-ui/icons';
 
 import useStyles from './styles';
@@ -9,6 +19,7 @@ import Chip from "@material-ui/core/Chip";
 import EcoIcon from '../../../assets/icon.svg'
 import Icon from "@material-ui/core/Icon";
 import Avatar from "@material-ui/core/Avatar";
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const Product = ({product, onAddToCart}) => {
     const classes = useStyles();
@@ -24,6 +35,21 @@ const Product = ({product, onAddToCart}) => {
     const renderBanner = () => (
         <span className="tooltip"><Chip className={classes.chip} icon={svgIcon} label="Sustainable"/> <span
             className="tooltiptext">For products labelled as “sustainable”, certified, organic materials are used.</span></span>
+    );
+    const renderProductinfo = () => (
+        <Accordion className={classes.accordion}>
+            <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+            >
+                <Typography className={classes.heading}>Product information</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+                <Typography dangerouslySetInnerHTML={{__html: product.description}} variant="body2"
+                            color="textSecondary" component="p"/>
+            </AccordionDetails>
+        </Accordion>
     );
     /* <Buton aria-label="Add to Cart" onClick={handleAddToCart}>
                     <AddShoppingCart/>
@@ -49,11 +75,10 @@ const Product = ({product, onAddToCart}) => {
                         {product.price.formatted}€
                     </Typography>
                 </div>
-                <Typography dangerouslySetInnerHTML={{__html: product.description}} variant="body2"
-                            color="textSecondary" component="p"/>
+                {product.categories.some(item => item.slug === 'sustainable') ? renderBanner() : null}
             </CardContent>
             <CardActions disableSpacing className={classes.cardActions}>
-                {product.categories.some(item => item.slug === 'sustainable') ? renderBanner() : null}
+                {product?renderProductinfo():null}
                 <IconButton aria-label="Add to Cart" onClick={handleAddToCart}>
                     <AddShoppingCart />
                 </IconButton>

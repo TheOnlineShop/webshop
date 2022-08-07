@@ -43,6 +43,10 @@ const Filters = ({filterProducts, keys}) => {
             flexGrow: 1,
             padding: theme.spacing(3),
         },
+        controlLabel:{
+            paddingTop:'7px',
+            paddingBottom:'7px'
+        }
     }));
 
     const [value, setValue] = React.useState(keys.men ? 'men': keys.women ? 'women': '');
@@ -75,28 +79,19 @@ const Filters = ({filterProducts, keys}) => {
             >
                 <div className={classes.drawerContainer}>
                     <FormControl component="fieldset" className={classes.formControl}>
-                        <FormLabel component="legend">Gender</FormLabel>
-                        <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
-                            <FormControlLabel value="women" control={<Radio />} label="Women" />
-                            <FormControlLabel value="men" control={<Radio />} label="Men" />
-                        </RadioGroup>
-                        <FormLabel component="legend">Size</FormLabel>
+                        <FormLabel component="legend">Category</FormLabel>
                         <FormGroup>
                             <FormControlLabel
-                                control={<Checkbox checked={keys.s} onChange={handleFilterProducts} name="s" />}
-                                label="S"
+                                control={<Checkbox checked={keys.apparel} onChange={handleFilterProducts} name="apparel" />}
+                                label="Apparel" className={classes.controlLabel}
                             />
                             <FormControlLabel
-                                control={<Checkbox checked={keys.m} onChange={handleFilterProducts} name="m" />}
-                                label="M"
+                                control={<Checkbox checked={keys.office} onChange={handleFilterProducts} name="office" />}
+                                label="Office Supplies" className={classes.controlLabel}
                             />
                             <FormControlLabel
-                                control={<Checkbox checked={keys.l} onChange={handleFilterProducts} name="l" />}
-                                label="L"
-                            />
-                            <FormControlLabel
-                                control={<Checkbox checked={keys.xl} onChange={handleFilterProducts} name="xl" />}
-                                label="XL"
+                                control={<Checkbox checked={keys.snacks} onChange={handleFilterProducts} name="snacks" />}
+                                label="Food & Beverages" className={classes.controlLabel}
                             />
                         </FormGroup>
                         <FormLabel component="legend">Tags</FormLabel>

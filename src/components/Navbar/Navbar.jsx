@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography, Modal} from '@material-ui/core';
 import {ShoppingCart} from '@material-ui/icons';
 import {Link, useLocation} from 'react-router-dom';
-import logo from '../../assets/Ernstings_family.jpeg';
+import logo from '../../assets/Logo.jpg';
 import useStyles from './styles';
 import FormDialog from "../Modal/FormDialog";
 import {Form} from "semantic-ui-react";

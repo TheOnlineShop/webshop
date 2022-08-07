@@ -58,13 +58,9 @@ const App = () => {
     const [cart, setCart] = useState({});
     const [order, setOrder] = useState({});
     const [filterState, setfitlerState] = useState({
-            men : false,
-            women: false,
-            kids: false,
-            s: false,
-            m: false,
-            l: false,
-            xl: false,
+            apparel: false,
+            office: false,
+            snacks: false,
             sustainable: false
     });
 
