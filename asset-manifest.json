@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/webshop/static/css/main.9848d6fa.chunk.css",
+    "main.js": "/webshop/static/js/main.09dd8217.chunk.js",
+    "main.js.map": "/webshop/static/js/main.09dd8217.chunk.js.map",
+    "runtime-main.js": "/webshop/static/js/runtime-main.7360cb70.js",
+    "runtime-main.js.map": "/webshop/static/js/runtime-main.7360cb70.js.map",
+    "static/js/2.e8afb50f.chunk.js": "/webshop/static/js/2.e8afb50f.chunk.js",
+    "static/js/2.e8afb50f.chunk.js.map": "/webshop/static/js/2.e8afb50f.chunk.js.map",
+    "index.html": "/webshop/index.html",
+    "precache-manifest.cc726638f879845337325b3e77f0f13e.js": "/webshop/precache-manifest.cc726638f879845337325b3e77f0f13e.js",
+    "service-worker.js": "/webshop/service-worker.js",
+    "static/css/main.9848d6fa.chunk.css.map": "/webshop/static/css/main.9848d6fa.chunk.css.map",
+    "static/js/2.e8afb50f.chunk.js.LICENSE.txt": "/webshop/static/js/2.e8afb50f.chunk.js.LICENSE.txt",
+    "static/media/Logo.jpg": "/webshop/static/media/Logo.f9637bc9.jpg",
+    "static/media/icon.svg": "/webshop/static/media/icon.28a304ac.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7360cb70.js",
+    "static/js/2.e8afb50f.chunk.js",
+    "static/css/main.9848d6fa.chunk.css",
+    "static/js/main.09dd8217.chunk.js"
+  ]
+}
